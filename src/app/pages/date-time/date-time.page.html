@@ -1,0 +1,45 @@
+<app-header titulo="Datetime"></app-header>
+
+<ion-content class="ion-padding">
+    <ion-list>
+        <ion-list-header>
+            <ion-label>Datos de nacimiento</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label><strong>Fecha de nacimiento: </strong></ion-label>
+            <ion-datetime display-format="DD MMMM YYYY" [value]="fechaHoy.toISOString()" (ionChange)="obtenerFecha($event)" [monthNames]="monthShortNames"></ion-datetime>
+        </ion-item>
+
+        <ion-list-header>
+            <ion-label>Restricciones</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label><strong>Mix y Max: </strong></ion-label>
+            <ion-datetime display-format="DD MMMM YYYY" [value]="fechaHoy.toISOString()" min="2015" max="2030" [monthNames]="monthShortNames"></ion-datetime>
+        </ion-item>
+
+        <ion-list-header>
+            <ion-label>Años</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label><strong>Seleccione un año: </strong></ion-label>
+            <ion-datetime display-format="YYYY" [value]="fechaHoy.toISOString()" min="2015" max="2030"></ion-datetime>
+        </ion-item>
+
+        <ion-list-header>
+            <ion-label>Hora</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label><strong>Seleccione una hora: </strong></ion-label>
+            <ion-datetime display-format="HH:mm a" [value]="fechaHoy.toISOString()"></ion-datetime>
+        </ion-item>
+
+          <ion-list-header>
+            <ion-label>Custom dateTimePicker</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label><strong>Custom picker: </strong></ion-label>
+            <ion-datetime [value]="fechaHoy.toISOString()" [pickerOptions]="customPickerOptions" display-format="DD MMMM YYYY" [monthNames]="monthShortNames"></ion-datetime>
+        </ion-item>
+    </ion-list>
+</ion-content>

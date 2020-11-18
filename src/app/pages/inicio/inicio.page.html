@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Pagina de Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let item of componentes" [routerLink]="item.redirectTo" detail="true">
+      <ion-icon slot="start" [name]="item.icon" color="primary"></ion-icon>
+      <ion-label>{{ item.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-button color="primary" fill="solid" routerLink="/alerta">
+    Alerta
+  </ion-button>
+  <ion-button color="success" fill="solid" routerLink="/action-sheet">
+    Action-sheet
+  </ion-button> -->
+</ion-content>
