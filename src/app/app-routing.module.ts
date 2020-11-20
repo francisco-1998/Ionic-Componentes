@@ -47,6 +47,14 @@ const routes: Routes = [
     path: 'grid',
     loadChildren: () => import('./pages/grid/grid.module').then( m => m.GridPageModule)
   },
+  {
+    path: 'infinity-scroll',
+    loadChildren: () => import('./pages/infinity-scroll/infinity-scroll.module').then( m => m.InfinityScrollPageModule)
+  },
+  {
+    path: 'input',
+    loadChildren: () => import('./pages/input/input.module').then( m => m.InputPageModule)
+  },
 ];
 
 @NgModule({
