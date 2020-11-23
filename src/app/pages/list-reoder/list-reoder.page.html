@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title color="primary">List - Reoder</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="icon-only" name="{{  activar ? 'eye-off-outline' : 'eye-outline' }}"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- <ion-list> -->
+      <ion-reorder-group (ionItemReorder)="doReorder($event)" [disabled]="activar">
+
+        <ion-item *ngFor="let item of personajes">
+          <ion-label>{{ item }}</ion-label>
+          <ion-reorder slot="end">
+            <ion-icon name="body-outline"></ion-icon>
+          </ion-reorder>
+        </ion-item>
+
+      </ion-reorder-group>
+
+    <!-- </ion-list> -->
+</ion-content>
