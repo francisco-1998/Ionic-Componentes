@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Componente {
-  icon: string,
-  name: string,
-  redirectTo: string
-}
-
+import { Componente } from 'src/app/Models/menu';
+import { DataService } from '../../services/data.service';
+import { Observable } from 'rxjs';
+import { ThrowStmt } from '@angular/compiler';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
@@ -13,79 +10,14 @@ interface Componente {
 })
 export class InicioPage implements OnInit {
 
-  componentes: Componente[]=[
-    {
-      icon: 'american-football-outline',
-      name: 'Action Sheet',
-      redirectTo: '/action-sheet'
-    },
-    {
-      icon: 'alert-circle-outline',
-      name: 'Alert',
-      redirectTo: '/alerta'
-    },
-    {
-      icon: 'beaker-outline',
-      name: 'Avatar',
-      redirectTo: '/avatar'
-    },
-    {
-      icon: 'radio-button-off-outline',
-      name: 'Botones',
-      redirectTo: '/botones'
-    },
-    {
-      icon: 'card-outline',
-      name: 'Tarjetas',
-      redirectTo: '/card'
-    },
-    {
-      icon: 'checkmark-circle-outline',
-      name: 'CheckBox',
-      redirectTo: '/check'
-    },
-    {
-      icon: 'calendar-outline',
-      name: 'Datetime',
-      redirectTo: '/date-time'
-    },
-    {
-      icon: 'car-outline',
-      name: 'Fab',
-      redirectTo: '/fab'
-    },
-    {
-      icon: 'grid-outline',
-      name: 'Grid',
-      redirectTo: '/grid'
-    },
-    {
-      icon: 'disc-outline',
-      name: 'Infinity Scroll',
-      redirectTo: '/infinity-scroll'
-    },
-    {
-      icon: 'list-outline',
-      name: 'Ion List Page',
-      redirectTo: '/list'
-    },
-    {
-      icon: 'reorder-three-outline',
-      name: 'Ion List Reorder',
-      redirectTo: '/list-reoder'
-    },
-    {
-      icon: 'refresh-circle-outline',
-      name: 'Loading',
-      redirectTo: '/loading'
-    },
-  ];
+  componentes: Observable<Componente[]>;
 
-  constructor() {
+  constructor(private dataService:DataService) {
 
   }
 
   ngOnInit() {
+    this.componentes = this.dataService.getOpts();
   }
 
 }
