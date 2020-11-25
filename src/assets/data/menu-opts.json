@@ -83,5 +83,10 @@
       "icon": "code-working-outline",
       "name": "Progress",
       "redirectTo": "/progress"
+    },
+    {
+      "icon": "logo-firefox",
+      "name": "Refresher",
+      "redirectTo": "/refresher"
     }
 ]
