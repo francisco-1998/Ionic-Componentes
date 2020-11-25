@@ -25,6 +25,11 @@
       "redirectTo": "/card"
     },
     {
+      "icon": "hammer-outline",
+      "name": "Inputs",
+      "redirectTo": "/input"
+    },
+    {
       "icon": "checkmark-circle-outline",
       "name": "CheckBox",
       "redirectTo": "/check"
@@ -63,5 +68,20 @@
       "icon": "refresh-circle-outline",
       "name": "Loading",
       "redirectTo": "/loading"
+    },
+    {
+      "icon": "open-outline",
+      "name": "Modal",
+      "redirectTo": "/ionic-modal"
+    },
+    {
+      "icon": "terminal-outline",
+      "name": "Popover",
+      "redirectTo": "/popover"
+    },
+    {
+      "icon": "code-working-outline",
+      "name": "Progress",
+      "redirectTo": "/progress"
     }
 ]

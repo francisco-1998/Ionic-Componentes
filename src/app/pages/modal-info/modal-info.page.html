@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ nombre }} - {{ pais }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="sinArgumentos()">
+        <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button (click)="sinArgumentos()" expand="block">
+    Cerrar modal sin argumentos
+  </ion-button>
+  <ion-button (click)="conArgumentos()" expand="block">
+    Cerrar modal con argumentos
+  </ion-button>
+</ion-content>

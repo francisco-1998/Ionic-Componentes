@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content>
   <ion-list>
     <ion-item *ngFor="let item of componentes | async" [routerLink]="item.redirectTo" detail="true">
       <ion-icon slot="start" [name]="item.icon" color="primary"></ion-icon>
