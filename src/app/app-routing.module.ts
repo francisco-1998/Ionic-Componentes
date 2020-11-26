@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { InicioPageModule } from './pages/inicio/inicio.module';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'slides',
     pathMatch: 'full'
   },
+  // {
+  //   path: '',
+  //   component: InicioPageModule
+  //   // pathMatch: 'full'
+  // },
   {
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
@@ -94,6 +100,10 @@ const routes: Routes = [
   {
     path: 'slides',
     loadChildren: () => import('./pages/slides/slides.module').then( m => m.SlidesPageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   }
 ];
 

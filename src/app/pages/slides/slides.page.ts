@@ -45,7 +45,7 @@ export class SlidesPage implements OnInit {
   };
 
   onClick(){
-    this.navCtrl.navigateBack('/');
+    this.navCtrl.navigateBack('/inicio');
   }
 
 }
