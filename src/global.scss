@@ -28,3 +28,9 @@
 .rojo, .rojo .sc-ion-action-sheet-md{
     color: red !important;
 }
+
+ion-searchbar{
+    --box-shadow:none !important;
+    // --background: #F5F7FA !important;
+    --border-radius : 5px !important;
+}
